@@ -1,0 +1,140 @@
+//Frame border is inspired by "Postcard"
+//A PEN BY Grant Forrest
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  text-align: right;
+  background-color: #1c618c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-container::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  bottom: 30px;
+  right: 30px;
+  border: 3px solid white;
+}
+
+.inner-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.inner-container {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #1c618c;
+  position: absolute;
+  padding-right: 27px;
+  bottom: 0;
+  padding-bottom: 15px;
+  right: 0px;
+  z-index: 2;
+}
+
+p {
+  margin: 0;
+}
+#p-left {
+  text-align: left;
+}
+
+.search-bar {
+  position: absolute;
+  top: 47%;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+input {
+  height: 35px;
+  padding: 0 20px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  height: 38px;
+  padding: 0 20px;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  border: 2px solid white;
+}
+
+.button:hover {
+  color: silver;
+  border-color: silver;
+  outline: 0;
+}
+.query-result {
+  text-align: left;
+}
+.query-result a {
+  color: white;
+}
+.output-wrapper {
+  width: 66%;
+  margin: 20px auto;
+}
+.output-wrapper li {
+  //  border: 1px solid white;
+  margin-top: 10px;
+  background: white;
+  color: white;
+  padding: 20px;
+}
+.output-wrapper li p {
+  color: black;
+}
+
+//.output-wrapper li:hover{
+// background: #fff5ad;
+//   border: none;
+//   -webkit-transition: all 0s!important;
+// -moz-transition: all 0s!important;
+// -ms-transition: all 0s!important;
+// -o-transition: all 0s!important;
+// transition: all 0s!important;
+//}
+.output-wrapper a {
+  text-decoration: none;
+  color: #317dcd;
+}
