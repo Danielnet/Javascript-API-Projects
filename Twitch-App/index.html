@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch App</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- Twitch App.
+Displays 10 streamers based on button clicked/ online status.
+Uses twitch and freecodecamp.org API
+Search bar not implemented yet.
+Made by Daniel Eidså-->
+
+
+<body>
+  <div class="logo text-center main-container">
+    <img class="logo-img" src="https://vignette.wikia.nocookie.net/logopedia/images/8/83/Twitch_icon.svg/revision/latest?cb=20140727180700"></img>
+
+    <div class="container-fluid button-container">
+      <button id="all" class="custom-button">All</button>
+      <button id="online" class="custom-button"><i class="fas fa-circle green"></i> Online</button>
+      <button id="offline" class="custom-button"><i class="fas fa-circle red"></i> Offline</button>
+    </div>
+  </div>
+  <div class="bottom-container">
+    <div id="first" class="container-fluid">
+      <i class="fas fa-search"></i><input class="search" placeholder="Search"></input>
+    </div>
+
+    <!--  Dummy item to style without get request
+
+<div class="container-fluid item">
+      <img class="show-pic  float-left"></img>
+      <div class="container">
+        <h5>Description</h5>
+        <p>show title</p>
+      </div>
+    </div>
+    <hr class="hr.style14"></hr> -->
+
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
