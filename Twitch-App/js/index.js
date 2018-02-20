@@ -48,7 +48,6 @@ $(document).ready(function() {
     $("hr").remove();
 
     var buttonInfo = this.id;
-console.log(buttonInfo);
     for (i = 0; i < arr.length; i++) {
       var endUrl = baseUrl + arr[i];
 
@@ -80,7 +79,11 @@ console.log(buttonInfo);
             var logo = result.stream.channel.logo;
             var link = result.stream.channel.url;
 
-            if (buttonInfo == "all" || buttonInfo == "online" || buttonInfo == undefined) {
+            if (
+              buttonInfo == "all" ||
+              buttonInfo == "online" ||
+              buttonInfo == undefined
+            ) {
               renderItem(logo, arr[i], title, link);
             }
           }
@@ -92,7 +95,11 @@ console.log(buttonInfo);
             var logo = offlineResult.logo;
             var link = offlineResult.url;
 
-            if (buttonInfo == "all" || buttonInfo == "offline" || buttonInfo == undefined) {
+            if (
+              buttonInfo == "all" ||
+              buttonInfo == "offline" ||
+              buttonInfo == undefined
+            ) {
               renderItem(logo, arr[i], title, link);
               $("#i" + id).remove();
             }
@@ -102,10 +109,30 @@ console.log(buttonInfo);
     }
   }
   //default render on page load. show all items both online and offline
-renderFromButton();
-  
-  //all BUTTON triggers
+  renderFromButton();
+
+  //all button triggers
   $("#all").on("click", renderFromButton);
   $("#online").on("click", renderFromButton);
   $("#offline").on("click", renderFromButton);
+
+  //Search bar Function
+  $("#search").keyup(function() {
+    var itemSelector;
+    var nameSelector;
+    var input = document.getElementById("search");
+    var filter = input.value.toUpperCase();
+    for (var z = 0; z < arr.length; z++) {
+      itemSelector = document.getElementById(z); //item
+      nameSelector = itemSelector
+        .getElementsByTagName("a")[0]
+        .getElementsByTagName("h5")[0].innerHTML;
+
+      if (nameSelector.toUpperCase().indexOf(filter) > -1) {
+        itemSelector.style.display = "";
+      } else {
+        itemSelector.style.display = "none";
+      }
+    }
+  });
 });

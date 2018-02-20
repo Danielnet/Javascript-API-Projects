@@ -65,7 +65,7 @@ h4 {
   border-left: 5px solid $purple;
 }
 
-.search {
+#search {
   // background:gold;
   padding: 5px;
 
@@ -168,4 +168,10 @@ hr {
   margin-left: 5px !important;
   margin-bottom: 2px;
   margin-right: 5px;
+}
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  //max-width: 25ch;
 }

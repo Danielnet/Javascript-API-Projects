@@ -58,7 +58,7 @@ h4 {
   border-left: 5px solid #4b367c;
 }
 
-.search {
+#search {
   padding: 5px;
   width: 70%;
   text-align: left;
@@ -163,4 +163,10 @@ hr {
   margin-left: 5px !important;
   margin-bottom: 2px;
   margin-right: 5px;
+}
+
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
